@@ -1,0 +1,29 @@
+{
+  "name": "dpm",
+  "version": "0.0.2",
+  "description": "Dynamo Package Manager cli",
+  "main": "./bin/dpm",
+  "bin": {
+    "dpm": "./bin/dpm"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write bin/dpm \"**/*.js\"",
+    "standard": "standard --fix bin/dpm \"**/*.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "columnify": "^1.5.4",
+    "commander": "^8.3.0",
+    "got": "^11.8.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2",
+    "standard": "^16.0.3"
+  }
+}

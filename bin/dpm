@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+'use strict'
+
+const { Command } = require('commander')
+
+const { health } = require('../lib/health')
+const { version } = require('../package.json')
+
+const dmp = new Command()
+
+dmp.description('Dynamo package manager').version(version)
+
+dmp
+  .command('health')
+  .description("check dynamo package manager's health")
+  .action(health)
+
+dmp.parse(process.argv)
