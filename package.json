@@ -1,6 +1,6 @@
 {
   "name": "dpm",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Dynamo Package Manager cli",
   "main": "./bin/dpm",
   "bin": {

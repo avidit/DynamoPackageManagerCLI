@@ -5,7 +5,7 @@
 const { Command } = require('commander')
 
 const { health } = require('../lib/health')
-const { list } = require('../lib/package')
+const { list, search } = require('../lib/package')
 const { version } = require('../package.json')
 
 const dpm = new Command()
@@ -22,5 +22,13 @@ dpm
   .alias('ls')
   .description('list installed dynamo packages')
   .action(list)
+
+dpm
+  .command('search')
+  .description('search dynamo package')
+  .argument('<query>', 'query to find packages with matching name or keywords')
+  .action((query) => {
+    search(query)
+  })
 
 dpm.parse(process.argv)
