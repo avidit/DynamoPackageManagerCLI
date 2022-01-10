@@ -5,15 +5,22 @@
 const { Command } = require('commander')
 
 const { health } = require('../lib/health')
+const { list } = require('../lib/package')
 const { version } = require('../package.json')
 
-const dmp = new Command()
+const dpm = new Command()
 
-dmp.description('Dynamo package manager').version(version)
+dpm.description('Dynamo package manager').version(version)
 
-dmp
+dpm
   .command('health')
   .description("check dynamo package manager's health")
   .action(health)
 
-dmp.parse(process.argv)
+dpm
+  .command('list')
+  .alias('ls')
+  .description('list installed dynamo packages')
+  .action(list)
+
+dpm.parse(process.argv)

@@ -1,6 +1,6 @@
 {
   "name": "dpm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Dynamo Package Manager cli",
   "main": "./bin/dpm",
   "bin": {
@@ -20,7 +20,8 @@
   "dependencies": {
     "columnify": "^1.5.4",
     "commander": "^8.3.0",
-    "got": "^11.8.3"
+    "got": "^11.8.3",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "prettier": "^2.3.2",
