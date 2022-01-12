@@ -5,7 +5,7 @@
 const { Command } = require('commander')
 
 const { health } = require('../lib/health')
-const { list, search, info } = require('../lib/package')
+const { list, search, info, install } = require('../lib/package')
 const { version } = require('../package.json')
 
 const dpm = new Command()
@@ -38,6 +38,15 @@ dpm
   .argument('<name>', 'package name or id')
   .action((name) => {
     info(name)
+  })
+
+dpm
+  .command('install')
+  .description('install package')
+  .argument('<name>', 'package name or id')
+  .argument('[version]', 'package version')
+  .action((name, version) => {
+    install(name, version)
   })
 
 dpm.parse(process.argv)

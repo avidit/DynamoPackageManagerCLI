@@ -1,6 +1,6 @@
 {
   "name": "dpm",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Dynamo Package Manager cli",
   "main": "./bin/dpm",
   "bin": {
@@ -18,6 +18,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "adm-zip": "^0.5.9",
     "columnify": "^1.5.4",
     "commander": "^8.3.0",
     "got": "^11.8.3",
