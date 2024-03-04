@@ -4,10 +4,9 @@ const homedir = require('os').homedir()
 const path = require('path')
 const { writeFileSync, existsSync, mkdirSync } = require('fs')
 
-const DYNAMO_VERSION = '2.14'
+const DYNAMO_VERSION = '3.0'
 const BASE_URL = 'https://dynamopackages.com'
 const DYNAMO_HOST = 'Dynamo Core'
-const PREFERENCES_FILE = `${process.env.APPDATA}\\Dynamo\\${DYNAMO_HOST}\\${DYNAMO_VERSION}\\DynamoSettings.xml`
 const CACHE_DIR = path.join(homedir, '.cache', 'dpm')
 const PACKAGES_CACHE = path.join(CACHE_DIR, 'packages.json')
 const CACHE_DURATION = 3600000
@@ -18,7 +17,6 @@ const DYNAMO_CONFIG = {
   DYNAMO_VERSION: DYNAMO_VERSION,
   BASE_URL: BASE_URL,
   DYNAMO_HOST: DYNAMO_HOST,
-  PREFERENCES_FILE: PREFERENCES_FILE,
   PACKAGES_CACHE: PACKAGES_CACHE,
   CACHE_DURATION: CACHE_DURATION
 }
