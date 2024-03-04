@@ -10,6 +10,9 @@
     "lib": "lib"
   },
   "scripts": {
+    "version:patch": "npm version patch -m \"Upgrade to v%s\" --no-git-tag-version",
+    "version:minor": "npm version minor -m \"Upgrade to v%s\" --no-git-tag-version",
+    "version:major": "npm version major -m \"Upgrade to v%s\" --no-git-tag-version",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prettier": "prettier --write bin/dpm \"**/*.js\"",
     "standard": "standard --fix bin/dpm \"**/*.js\""
