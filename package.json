@@ -1,6 +1,6 @@
 {
   "name": "@avidit/dpm",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "Dynamo Package Manager cli",
   "main": "./bin/dpm",
   "bin": {
