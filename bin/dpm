@@ -4,6 +4,7 @@
 
 const { Command } = require('commander')
 
+const { listConfig, getConfig, setConfig } = require('../lib/config')
 const { health } = require('../lib/health')
 const { list, search, info, install, uninstall } = require('../lib/package')
 const { version } = require('../package.json')
@@ -56,5 +57,30 @@ dpm
   .action((name) => {
     uninstall(name)
   })
+
+const config = dpm.command('config')
+
+config
+  .description('manage dmp configuration')
+  .argument('<command>', 'config command')
+
+config
+  .command('list')
+  .alias('ls')
+  .description('list configuration')
+  .action(listConfig)
+
+config
+  .command('get')
+  .description('get config')
+  .argument('<key>', 'config key')
+  .action((key) => getConfig(key))
+
+config
+  .command('set')
+  .description('set config')
+  .argument('<key>', 'config key')
+  .argument('<value>', 'config value')
+  .action((key, value) => setConfig(key, value))
 
 dpm.parse(process.argv)

@@ -40,7 +40,7 @@ const CONFIG = { ...DYNAMO_CONFIG, ...{ COLUMNIFY_CONFIG } }
     !existsSync(CACHE_DIR) && mkdirSync(CACHE_DIR, { recursive: true })
     !existsSync(CONFIG_DIR) && mkdirSync(CONFIG_DIR, { recursive: true })
     !existsSync(CONFIG_FILE) &&
-      writeFileSync(CONFIG_FILE, JSON.stringify(CONFIG))
+      writeFileSync(CONFIG_FILE, JSON.stringify(CONFIG, null, 2))
   } catch (error) {
     console.error(error)
   }
