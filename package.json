@@ -9,6 +9,7 @@
   "directories": {
     "lib": "lib"
   },
+  "os": ["win32"],
   "scripts": {
     "version:patch": "npm version patch -m \"Upgrade to v%s\"",
     "version:minor": "npm version minor -m \"Upgrade to v%s\"",
@@ -17,8 +18,8 @@
     "prettier": "prettier --write bin/dpm \"**/*.js\"",
     "standard": "standard --fix bin/dpm \"**/*.js\""
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["dynamo", "package", "manager", "cli", "dpm"],
+  "author": "avidit",
   "license": "ISC",
   "dependencies": {
     "adm-zip": "^0.5.9",
@@ -30,5 +31,13 @@
   "devDependencies": {
     "prettier": "^2.3.2",
     "standard": "^16.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avidit/DynamoPackageManagerCLI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/avidit/DynamoPackageManagerCLI/issues"
+  },
+  "homepage": "https://github.com/avidit/DynamoPackageManagerCLI#readme"
 }
