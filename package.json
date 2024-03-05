@@ -1,18 +1,18 @@
 {
-  "name": "dpm",
+  "name": "@avidit/dpm",
   "version": "0.0.8",
   "description": "Dynamo Package Manager cli",
   "main": "./bin/dpm",
   "bin": {
-    "dpm": "./bin/dpm"
+    "dpm": "bin/dpm"
   },
   "directories": {
     "lib": "lib"
   },
   "scripts": {
-    "version:patch": "npm version patch -m \"Upgrade to v%s\" --no-git-tag-version",
-    "version:minor": "npm version minor -m \"Upgrade to v%s\" --no-git-tag-version",
-    "version:major": "npm version major -m \"Upgrade to v%s\" --no-git-tag-version",
+    "version:patch": "npm version patch -m \"Upgrade to v%s\"",
+    "version:minor": "npm version minor -m \"Upgrade to v%s\"",
+    "version:major": "npm version major -m \"Upgrade to v%s\"",
     "test": "echo \"No test specified\"",
     "prettier": "prettier --write bin/dpm \"**/*.js\"",
     "standard": "standard --fix bin/dpm \"**/*.js\""

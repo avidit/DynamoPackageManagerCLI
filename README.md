@@ -2,7 +2,7 @@
 
 ## Installation
 
-    npm install dpm
+    npm install @avidit/dpm
 
 ## Usage
 
