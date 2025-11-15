@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "prettier": "^2.3.2",
-    "standard": "^16.0.3"
+    "standard": "^17.1.2"
   },
   "repository": {
     "type": "git",
